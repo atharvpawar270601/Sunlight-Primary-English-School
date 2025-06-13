@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunlight School Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <!-- Header -->
+  <header class="bg-yellow-400 p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+    <button class="bg-yellow-600 text-white px-4 py-1 rounded">Logout</button>
+  </header>
+
+  <!-- Sidebar & Main -->
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-yellow-300 p-4 hidden md:block">
+      <nav class="space-y-2">
+        <a href="#notifications" class="block p-2 rounded hover:bg-yellow-200">Manage Notifications</a>
+        <a href="#gallery" class="block p-2 rounded hover:bg-yellow-200">Manage Gallery</a>
+        <a href="#teachers" class="block p-2 rounded hover:bg-yellow-200">Manage Teachers</a>
+        <a href="#committees" class="block p-2 rounded hover:bg-yellow-200">Manage Committees</a>
+        <a href="#forms" class="block p-2 rounded hover:bg-yellow-200">View Forms</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-4 space-y-8">
+      <section id="notifications">
+        <h2 class="text-xl font-bold mb-2">Manage Notifications</h2>
+        <input type="text" placeholder="New Notification" class="border rounded p-2 w-full mb-2">
+        <button class="bg-yellow-500 px-4 py-2 rounded text-white">Add Notification</button>
+        <ul class="mt-4 space-y-2">
+          <li class="bg-white p-2 rounded shadow">Admissions Open <button class="ml-2 text-red-500">Delete</button></li>
+          <li class="bg-white p-2 rounded shadow">Annual Sports Meet <button class="ml-2 text-red-500">Delete</button></li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2 class="text-xl font-bold mb-2">Manage Gallery</h2>
+        <input type="file" class="mb-2">
+        <button class="bg-yellow-500 px-4 py-2 rounded text-white">Upload Photo</button>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
+          <img src="https://via.placeholder.com/150" class="rounded shadow">
+          <img src="https://via.placeholder.com/150" class="rounded shadow">
+        </div>
+      </section>
+
+      <section id="teachers">
+        <h2 class="text-xl font-bold mb-2">Manage Teachers</h2>
+        <input type="text" placeholder="Teacher Name" class="border rounded p-2 w-full mb-2">
+        <input type="text" placeholder="Subject" class="border rounded p-2 w-full mb-2">
+        <button class="bg-yellow-500 px-4 py-2 rounded text-white">Add Teacher</button>
+        <ul class="mt-4 space-y-2">
+          <li class="bg-white p-2 rounded shadow">Mrs. A. Sharma (Principal) <button class="ml-2 text-red-500">Delete</button></li>
+        </ul>
+      </section>
+
+      <section id="committees">
+        <h2 class="text-xl font-bold mb-2">Manage Committees</h2>
+        <input type="text" placeholder="Committee Name" class="border rounded p-2 w-full mb-2">
+        <button class="bg-yellow-500 px-4 py-2 rounded text-white">Add Committee</button>
+        <ul class="mt-4 space-y-2">
+          <li class="bg-white p-2 rounded shadow">Discipline Committee <button class="ml-2 text-red-500">Delete</button></li>
+        </ul>
+      </section>
+
+      <section id="forms">
+        <h2 class="text-xl font-bold mb-2">View Form Responses</h2>
+        <a href="https://docs.google.com/forms/d/1Fh9XTa4SifuKc2VLM5YBExhAxSr7rz1E5jJ25oyoax8/edit#responses" target="_blank" class="text-blue-600 underline">View Admission Form Responses</a><br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNjIi9knLnY79dXiiUNCHuvrZKaGE2JYAuPt_7qj8PBb5A3Q/viewanalytics" target="_blank" class="text-blue-600 underline">View Suggestion Form Responses</a>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
